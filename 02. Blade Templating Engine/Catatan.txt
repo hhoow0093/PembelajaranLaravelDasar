@@ -1,0 +1,17 @@
+1. Menggunakan tailwind ui component untuk memperbaiki penapilna website
+
+2. Installasi tailwind framework Laravel
+https://tailwindcss.com/docs/guides/laravel
+
+3. tambahkan setting font pada tailwind
+https://tailwindui.com/documentation
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+        extend: {
+            fontFamily: {
+                sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+              },
+      },
+
+4. menggunakan alpine js untuk memanajemn responsivitas sebuah website
