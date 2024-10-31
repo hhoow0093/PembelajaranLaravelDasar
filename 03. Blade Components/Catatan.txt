@@ -16,5 +16,5 @@ contoh:
 
 kita juga dapat mengirimkan data ke component, yang dalamnya merupakan component lagi dengan menulis tag <x-slot:namaVariabel>, lalu file ke2 menangkapnya dengan <x-component>$namaVariabel<x-component>, dimana file ke 3 berisi <h1>$slot</h1>
 
-kita juga dapat mengirimkan attribute html ke dalam component dengan menggunakan $attributes, dan kita juga dapat mengirimkan sebuah data variable yang isinya function dengan awalan :<nama.variabel>
+kita juga dapat mengirimkan attribute html ke dalam component dengan menggunakan $attributes, dan kita juga dapat mengirimkan sebuah data attribut yang isinya function dengan awalan :active
 
