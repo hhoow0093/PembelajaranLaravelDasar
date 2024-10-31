@@ -1,0 +1,20 @@
+membuat component baru
+
+// menambahkan blade component pada folder resources/views/components
+// dan menambahkan component pada folder app/view/component
+1. php artisan make:component <nama.component> 
+
+// menambahkan blade component pada folder resources/views/components aja
+2. php artisan make:component <nama.component> --view
+
+habis membuat component, kita dapat mengaksesnya dengan menggunakan tag html awalan
+<x-<nama.component>>
+
+kita juga dapat mengirimkan data ke component dengan menulis data dalam tagnya, lalu menggunakan variable $slot
+contoh:
+<x-layout><h3>welcome to my page</h3></x-layout>
+
+kita juga dapat mengirimkan data ke component, yang dalamnya merupakan component lagi dengan menulis tag <x-slot:namaVariabel>, lalu file ke2 menangkapnya dengan <x-component>$namaVariabel<x-component>, dimana file ke 3 berisi <h1>$slot</h1>
+
+kita juga dapat mengirimkan attribute html ke dalam component dengan menggunakan $attributes, dan kita juga dapat mengirimkan sebuah data variable yang isinya function dengan awalan :<nama.variabel>
+
