@@ -1,0 +1,8 @@
+1. Untuk menyimpan data pada sebuah aplikasi Laravel, kita memanfaatkan folder models untuk menyimpan
+data tersebut ke dalam class. pastikan nama class dan namafolder php dalam folder models diawali kapital dan sama.
+
+2. Kita juga memanfaatkan namespace dan use. namespace digunakan untuk pemanggilan class yang lebih spesifik Ketika
+use digunakan pada file lain.
+
+3. pada filter data. lebih baik fungsi filter data dimasukkan ke dalam class juga biar tidak kecampur sama web.php.
+Ketika mau melakukan filter, langsung aja panggil method yang ada pada class models	

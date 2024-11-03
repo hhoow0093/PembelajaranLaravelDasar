@@ -1,0 +1,3 @@
+1. Str::limit($post['body'], 150) -> untuk membatasi jumlah karakter menampung dalam sebuah tag.
+2. Menggunakan variable slug untuk menghindari bypass pada page.
+3. Arr:first untuk filter content pada array yang sama pada pertama kali.
