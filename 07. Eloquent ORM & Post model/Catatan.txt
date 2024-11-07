@@ -1,0 +1,35 @@
+Untuk insert data ke dalam table pada Laravel, Folder models yang memiliki class tersbeut harus diisi
+
+				nama field dalam table
+1. protected $fillable = ['title', 'author', 'body', 'slug'].
+
+"harus tulis php artisan tinker"
+jalankan perintah dalam terminal untuk insert data ke dalam table:
+
+App\Models\<nama.file.class>::create([
+'title' => 'Judul Artikel 1',
+'author' => 'Howard',
+'slug' => 'judul-artikel-1',
+'body' => '..........................'
+]);
+
+jalankan perintah jika ingin lihat semua data pada terminal
+$posts = App\Models\<nama.file.class>::all()
+
+untuk lihat data pertama
+$posts->first()
+
+untuk lihat tekahir
+$posts->last()
+
+lihat berdasarkan id
+$post = $posts->find(4)
+
+delete variable post yang memiliki id 4
+post->delete()
+
+
+untuk membuat model : php artisan make:model <nama.model>
+
+membuat model beserta migrasi
+php artisan make:model <nama.Model> -m
