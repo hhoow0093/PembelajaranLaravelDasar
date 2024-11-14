@@ -1,0 +1,41 @@
+1. 
+Dalam model factories, kita dapat insert data data yang palsu ke dalam website kita dengan menggunakan
+folder yang terletak pada database/factories/UserFactory.php
+
+// null coalescing operator
+static::$password ??= Hash::make('password'); -> jika ada isi pada $password, maka akan hash 
+isi dari variable. Kalau tidak, maka akan hash yang memiliki string 'password'
+
+// ternary operator
+$a = $a ? $a : $b;
+
+// elvis operator
+$a = $a ?: $b; 
+
+// null coalescing operator
+$a ??= $b
+
+2.
+Untuk insert data dummy ke dalam tabel pada database,
+a. jalankan php artisan tinker.
+b. include nama model dalam folder model.
+c. jalankan <nama.model>::factory($jumlah_data_yang_mau)->create(); // peristing method
+d. 
+jika mau memodifikasi nilai field yng akan dibuat oleh factories, maka gunakan method 
+yang ada pada file factory
+
+3. 
+untuk membuat factory, ketik php artisan make:factory <PostFactory>
+dalam file Post factory, kita bisa ubah strukturnya pada function definition() sesuaikan dengan tabel supaya
+bisa inject data dummy
+    public function definition(): array
+    {
+        return [
+            'title' => fake()->sentence(),
+            'slug' => Str::slug(fake()->sentence()),
+            'author' => fake()->name(),
+            'body' => fake()->text()
+        ];
+    }
+
+jalankan App\Models\Post::factory(5)->create() untuk buat data dummy.
